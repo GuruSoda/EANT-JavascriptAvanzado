@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objectos en Javascript</h1>
+
+    <script>
+        // function se usa para objetos
+        // () => se usa para funciones.
+        const crearProducto = function(n, s, p, d) {
+            let elproducto = new Object()
+
+            // propiedades
+            elproducto.nombre = n
+            elproducto.stock = s
+            elproducto.precio = p
+            elproducto.disponible = d
+
+            // metodos
+            elproducto.mostrar = function() { // <-- Closure ( funcion dentro de otra )
+                window.document.write(`El nombre del producto es:` + `${elproducto.nombre}`)
+            }
+
+            return elproducto
+
+        }
+
+        let p = crearProducto('Malbec', 100, 34.99, false)
+        let q = crearProducto('Chocolate', 200, 23.44, true)
+
+        // objeto literal
+        let producto =  {
+            nombre = 'nombre del producto',
+            stock = 1000,
+            precio = 55.33,
+            disponible = false
+        }
+
+        // objeto diferido
+        let otroProducto = new Object()
+        
+        otroProducto.nombre = "No se el nombre",
+        otroProducto.stock = 200,
+        otroProducto.precio = 33.22,
+        otroProducto.disponible = true
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const miniFirefox = XMLHttpRequest()
+        miniFirefox.open('GET', 'https://api.myjson.com/bins/1giaf3')
+        miniFirefox.onLoad = function() {
+
+            if (this.status == 200) {
+
+            }
+
+        }
+
+        miniFirefox.onError = function () {
+
+        }
+
+        miniFirefox.send()
+    </script>
+    
+</body>
+</html>
